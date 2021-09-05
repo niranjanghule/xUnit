@@ -1,4 +1,4 @@
-from TestCase import TestCase
+from app.TestCase import TestCase
 from WasRun import WasRun
 
 
