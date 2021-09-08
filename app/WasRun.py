@@ -1,5 +1,5 @@
 from app.TestCase import TestCase
-
+from app.TestResult import TestResult
 
 class WasRun(TestCase):
     def __init__(self, name):
@@ -13,6 +13,9 @@ class WasRun(TestCase):
         self.wasRun = None
         self.wasSetup =1
         self.log = "setUp "
+
+    def testBrokenMethod(self):
+        raise Exception
 
     def tearDown(self):
         self.log = self.log + "tearDown "
