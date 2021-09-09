@@ -17,21 +17,21 @@ class TestCaseTest(TestCase):
         self.test = WasRun("testMethod")
         result = self.test.run()
         assert("1 run, 0 failed" == result.summary())
-        assert("1 run, 1 failed" != result.summary())
 
     def testFailedResult(self):
-        self.test = WasRun("testMethod")
+        self.test = WasRun("testBrokenMethod")
         result = self.test.run()
-        assert("2 run, 2 failed" == result.summary())
+        assert("1 run, 1 failed" == result.summary())
 
     def testFailedResultFormatting(self):
         result = TestResult()
         result.testStarted()
         result.testFailed()
-        assert "1 run, 1 failed", result.summary
+        assert ("1 run, 1 failed" == result.summary())
 
 
 TestCaseTest("testTemplateMethod").run()
 TestCaseTest("testResult").run()
-#TestCaseTest("testFailedResult").run()
+TestCaseTest("testFailedResultFormatting").run()
+TestCaseTest("testFailedResult").run()
 
