@@ -1,7 +1,7 @@
 # xUnit
 An implementation of JUnit like framework.
 
-## What is this project
+## What is it?
 I have been learning Test Driven Development from the book "Test-Driven Development By Example" by Kent Beck.<br>
 The book provides step by step instructions to develop a testing tool "xUnit".</br>
 This project is implementation of all the examples in the book.
